@@ -74,9 +74,9 @@ def lambda_handler(event, context):
         if last_modified < datetime.now(timezone.utc) - timedelta(minutes=1):
             print(f"Deleting file: {key}")
             s3.delete_object(Bucket=BUCKET_NAME, Key=key)
-
-    print("Cleanup completed successfully")
-    ```
+    
+   print("Cleanup completed successfully")
+```
 ---
 
 ### Step 5: Execution Result
