@@ -77,6 +77,9 @@ def lambda_handler(event, context):
 
     print("Cleanup completed successfully")
 
+
+    
+
 Step 5: Execution Result
 
 Executed the Lambda function manually using the Test event.
