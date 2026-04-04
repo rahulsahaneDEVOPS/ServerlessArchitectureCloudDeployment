@@ -77,11 +77,9 @@ def lambda_handler(event, context):
 
     print("Cleanup completed successfully")
 
+---
 
-    
-
-Step 5: Execution Result
-
+### Step 5: Execution Result
 Executed the Lambda function manually using the Test event.
 
 The logs showed:
@@ -90,7 +88,10 @@ Lambda execution started
 Files being checked
 Files being deleted
 Cleanup completed successfully
-Step 6: Result
+
+---
+
+###Step 6: Result
 
 After execution:
 
