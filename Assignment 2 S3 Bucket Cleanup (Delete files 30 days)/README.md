@@ -2,12 +2,12 @@
 
 ---
 
-##  Objective
+## Objective
 Automate the cleanup of old or unused files in an Amazon S3 bucket using AWS Lambda and Boto3.
 
 ---
 
-##  Services Used
+## Services Used
 - AWS S3  
 - AWS Lambda  
 - AWS IAM  
@@ -18,43 +18,30 @@ Automate the cleanup of old or unused files in an Amazon S3 bucket using AWS Lam
 ## Implementation Steps
 
 ### Step 1: S3 Bucket Setup
-Created an S3 bucket named **cleanup-s3bucket-rahul** and uploaded multiple files for testing the cleanup process.
-
-# Screenshot:  
-![S3 Bucket Before Cleanup](screenshots/01-s3-bucket-before-cleanup.png)
+Created an S3 bucket named `cleanup-s3bucket-rahul` and uploaded multiple files for testing the cleanup process.
 
 ---
 
 ### Step 2: IAM Role
-Created an IAM role named **lambda-s3-cleanup-role** with required permissions.
+Created an IAM role named `lambda-s3-cleanup-role` with required permissions.
 
 - Policy Attached: AmazonS3FullAccess  
-
-# Screenshot:  
-![IAM Role](screenshots/02-IAM_Role.png)
 
 ---
 
 ### Step 3: Lambda Function
 Created a Lambda function using Python runtime and attached the IAM role.
 
-- Function Name: **s3-cleanup**  
+- Function Name: `s3-cleanup`  
 - Runtime: Python 3.x  
-
-# Screenshot:  
-![Lambda Function](screenshots/03-Lambda_Function.png)
 
 ---
 
 ### Step 4: Lambda Code
 Implemented Boto3 code to:
-
 - List objects from the S3 bucket  
 - Check last modified date  
 - Delete files older than defined time  
-
-# Screenshot:  
-![Lambda Code](screenshots/04-Lambda_function_code.png)
 
 ---
 
@@ -90,34 +77,23 @@ def lambda_handler(event, context):
 
     print("Cleanup completed successfully")
 
-### Step 5: Execution Result
+Step 5: Execution Result
 
 Executed the Lambda function manually using the Test event.
 
-The logs show:
+The logs showed:
 
-- Lambda execution started  
-- Files being checked  
-- Files being deleted  
-- Cleanup completed successfully  
-
-# Screenshot:  
-![Lambda Execution Logs](screenshots/05-lambda_execution_logs.png)
-
----
-
-### Step 6: Result
+Lambda execution started
+Files being checked
+Files being deleted
+Cleanup completed successfully
+Step 6: Result
 
 After execution:
 
-- All files were successfully deleted  
-- S3 bucket is empty  
-
-# Screenshot:  
-!
-[S3 Bucket After Cleanup](screenshots/06-s3_bucket_after_cleanup.png)
-
-# Note
+All files were successfully deleted
+S3 bucket became empty
+Note
 
 For testing purposes, the time condition was set to:
 
@@ -129,10 +105,9 @@ timedelta(days=30)
 
 In real-world scenarios, 30 days should be used.
 
-# Conclusion
+Conclusion
 
 This assignment demonstrates how AWS Lambda and Boto3 can be used to automate S3 bucket cleanup, helping in cost optimization and efficient storage management.
 
 Author:
 Rahul Sahane
-
