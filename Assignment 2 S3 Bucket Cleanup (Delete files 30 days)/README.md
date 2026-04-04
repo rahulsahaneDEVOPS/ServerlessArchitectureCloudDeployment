@@ -21,7 +21,7 @@ Automate the cleanup of old or unused files in an Amazon S3 bucket using AWS Lam
 Created an S3 bucket named **cleanup-s3bucket-rahul** and uploaded multiple files for testing the cleanup process.
 
 # Screenshot:  
-[S3 Bucket Before Cleanup](screenshots/01-s3-bucket-before-cleanup.png)
+![S3 Bucket Before Cleanup](screenshots/01-s3-bucket-before-cleanup.png)
 
 ---
 
@@ -31,7 +31,7 @@ Created an IAM role named **lambda-s3-cleanup-role** with required permissions.
 - Policy Attached: AmazonS3FullAccess  
 
 # Screenshot:  
-[IAM Role](screenshots/02-IAM_Role.png)
+![IAM Role](screenshots/02-IAM_Role.png)
 
 ---
 
@@ -42,7 +42,7 @@ Created a Lambda function using Python runtime and attached the IAM role.
 - Runtime: Python 3.x  
 
 # Screenshot:  
-[Lambda Function](screenshots/03-Lambda_Function.png)
+![Lambda Function](screenshots/03-Lambda_Function.png)
 
 ---
 
@@ -54,7 +54,7 @@ Implemented Boto3 code to:
 - Delete files older than defined time  
 
 # Screenshot:  
-[Lambda Code](screenshots/04-Lambda function code.png)
+![Lambda Code](screenshots/04-Lambda_function_code.png)
 
 ---
 
@@ -102,7 +102,7 @@ The logs show:
 - Cleanup completed successfully  
 
 # Screenshot:  
-[Lambda Execution Logs](screenshots/05-lambda-execution-logs.png)
+![Lambda Execution Logs](screenshots/05-lambda_execution_logs.png)
 
 ---
 
@@ -114,7 +114,8 @@ After execution:
 - S3 bucket is empty  
 
 # Screenshot:  
-[S3 Bucket After Cleanup](screenshots/06-s3-bucket-after-cleanup.png)
+!
+[S3 Bucket After Cleanup](screenshots/06-s3_bucket_after_cleanup.png)
 
 # Note
 
@@ -134,3 +135,4 @@ This assignment demonstrates how AWS Lambda and Boto3 can be used to automate S3
 
 Author:
 Rahul Sahane
+
