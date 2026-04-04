@@ -91,7 +91,7 @@ Cleanup completed successfully
 
 ---
 
-###Step 6: Result
+### Step 6: Result
 
 After execution:
 
